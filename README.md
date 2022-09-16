@@ -27,6 +27,16 @@ and then use it
 For reading about Oracle connections may be ,
 https://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/
 
+For the error message
+"COULD NOT LOAD TYPE 'System.Security.Principal.WindowsImpersonationContext' from assembly 'mscorlib'",
+I refer to the link 
+https://stackoverflow.com/questions/68593542/could-not-load-type-system-security-principal-windowsimpersonationcontext-from/71467851#71467851
+
+For dot net 6, I was getting the same exception. Only kept the package: Oracle.ManagedDataAccess.Core and removed all others related to oracle and it works.
+
+Get rid of 'Oracle.ManagedDataAccess'. I had both 'Oracle.ManagedDataAccess' and 'Oracle.ManagedDataAccess.Core' installed. This issue is most likely caused because 'Oracle.ManagedDataAccess' is for .NET Framework and not .NET Core/.NET 6.
+
+
 
 
 

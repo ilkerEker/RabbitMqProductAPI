@@ -24,9 +24,30 @@ and then use it
 "DataSource=orcl;"
 
 
+***
 For reading about Oracle connections may be ,
 https://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/
 
+***
+for RabbitMQ Docker installation 
+Install Rabbitmq docker file using the following command (Note- docker desktop is in running mode):
+
+docker pull rabbitmq:3-management
+
+Next, create a container and start using the Rabbitmq Dockerfile that we downloaded:
+
+docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+
+http://localhost:15672/      with guest/guest
+and add a queue with name "product"
+
+
+
+
+
+Enter default username ("guest") and password (also "guest"), and next you will see the dashboard.
+
+*****
 For the error message
 "COULD NOT LOAD TYPE 'System.Security.Principal.WindowsImpersonationContext' from assembly 'mscorlib'",
 I refer to the link 

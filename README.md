@@ -24,5 +24,9 @@ and then use it
 "DataSource=orcl;"
 
 
+For reading about Oracle connections may be ,
+https://www.c-sharpcorner.com/UploadFile/nipuntomar/connection-strings-for-oracle/
+
+
 
 
